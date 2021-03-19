@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 def matrix_shape(matrix) : 
-    i=0
     list=[]
-    for row in matrix : 
-        i=i+1
+    while True : 
         j=0
-        for r in row : 
+        for row in matrix : 
             j=j+1
-    list.append(i)
-    list.append(j)
-    return list
+            list.append(j)
+            if(len(row)>1) : 
+                continue 
+            else : 
+                return list
 mat1 = [[1, 2], [3, 4]]
 print(matrix_shape(mat1))
 mat2 = [[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]],
